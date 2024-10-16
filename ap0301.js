@@ -70,6 +70,7 @@ function init() {
     //ロボットの動き
     robots.children.forEach((robot) => {
       robot.rotation.y =(robot.rotation.y+0.01)%(2*Math.PI);
+      robot.position.y=Math.sin(robot.rotation.y);
     });
     renderer.render(scene, camera);
     requestAnimationFrame(render);
